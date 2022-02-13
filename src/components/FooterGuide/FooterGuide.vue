@@ -28,13 +28,13 @@
   </div>
 </template>
 <script>
-export default {
-  methods:{
-    goTo(path){
-      this.$router.replace(path);
+  export default {
+    methods:{
+      goTo(path){
+        this.$router.replace(path);
+      }
     }
   }
-}
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixins.styl"

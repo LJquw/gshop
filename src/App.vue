@@ -6,12 +6,22 @@
 </template>
 
 <script>
-import FooterGuide from './components/FooterGuide/FooterGuide'
-export default {
-  components: {
-    FooterGuide
+import {mapActions} from 'vuex'
+  import FooterGuide from './components/FooterGuide/FooterGuide'
+
+  export default {
+    async mounted() {
+       // this.$store.dispatch('getAddress')
+      this.getAddress()
+      this.getUserInfo()
+    },
+    methods:{
+      ...mapActions(['getAddress','getUserInfo'])
+    },
+    components: {
+      FooterGuide
+    },
   }
-}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
