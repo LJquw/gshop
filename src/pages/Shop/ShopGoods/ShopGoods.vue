@@ -43,9 +43,9 @@
           </li>
         </ul>
       </div>
-      <ShopCart />
+      <ShopCart></ShopCart>
     </div>
-    <Food :food="food" ref="food"/>
+    <Food :food="food" ref="food"></Food>
   </div>
 </template>
 <script>
@@ -76,7 +76,7 @@
       ...mapState(['goods']),
 
       // 计算得到当前分类的下标
-      currentIndex() {// 初始和相关数据发生了变化
+      currentIndex: function () {// 初始和相关数据发生了变化
         // 得到条件数据
         const {scrollY, tops} = this
         // 根据条件计算产生一个结果
@@ -129,9 +129,10 @@
 
         // 3. 更新数据
         this.tops = tops
-        console.log(tops)
+        console.log("tops ",tops)
       },
 
+      // 点击左侧导航栏
       clickMenuItem(index) {
         // console.log(index)
         // 使用右侧列表滑动到对应的位置
